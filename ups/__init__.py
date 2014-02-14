@@ -12,4 +12,5 @@ __version__ = '0.4.3'
 
 
 from .shipping_package import ShipmentConfirm, ShipmentAccept, ShipmentVoid
-from .shipping_package import PyUPSException
+from .time_in_transit import TimeInTransit
+from .base import PyUPSException
