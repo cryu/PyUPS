@@ -547,6 +547,16 @@ class ShipmentConfirm(BaseAPIClient):
             )
 
     @classmethod
+    def reference_number(cls, *args, **kwargs):
+        """
+        This can be used for Shipment/ReferenceNumber as well as for
+        Package/ReferenceNumber
+        :param Code: string of length 2
+        :param Value:
+        """
+        return E.ReferenceNumber(*cls.make_elements([], args, kwargs))
+
+    @classmethod
     def package_service_options_type(cls, *args, **kwargs):
         """
         :param InsuredValue: Generated from :meth:`insured_value_type`
