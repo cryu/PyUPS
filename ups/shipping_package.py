@@ -486,6 +486,29 @@ class ShipmentConfirm(BaseAPIClient):
         return E.ShipmentServiceOptions(*cls.make_elements([], args, kwargs))
 
     @classmethod
+    def notification_type(cls, *args, **kwargs):
+        """Service Options: Notification
+
+        :param NotificationCode
+        :param EMailMessage
+        """
+        return E.Notification(*cls.make_elements([], args, kwargs))
+
+    @classmethod
+    def notification_emailmessage_type(cls, *args, **kwargs):
+        """Service Options: Notification/EMailMessage
+
+        :param EMailAddress
+        :param UndeliverableEMailAddress
+        :param FromEMailAddress
+        :param FromName
+        :param Memo
+        :param Subject
+        :param SubjectCode
+        """
+        return E.EMailMessage(*cls.make_elements([], args, kwargs))
+
+    @classmethod
     def packaging_type(cls, *args, **kwargs):
         """
         Packaging Container Packaging type is required for Ground Freight
